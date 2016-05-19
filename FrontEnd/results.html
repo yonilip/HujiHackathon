@@ -22,8 +22,6 @@
 
 <!-- NAVBAR
 ================================================== -->
-<body>
-
 <div class="row">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -59,7 +57,60 @@
     </nav>
 </div>
 
+<div class="row">
+    <div class="col-md-2">
+        <!--left buffer-->
+    </div>
+    <div class="col-md-8">
+        <div class="row"> <!--search bar-->
 
+        </div>
+        <div class="result_objects"></div>
+    </div>
+    <div class="col-md-2">
+    <!--right buffer-->
+    </div>
+</div>
+
+<script>
+    function search() {
+        jQuery.ajax({
+                    url: "http://getlocal1.rapidapi.io/results",
+                    type: "POST",
+                    contentType: "application/x-www-form-urlencoded",
+                    data: {
+                        'email': $('.email').val()
+                    },
+                })
+                .done(function(data, textStatus, jqXHR) {
+                    console.log("HTTP Request Succeeded: " + jqXHR.status);
+                    console.log(data);
+                    data.forEach(function(user){
+                        $(".result_objects").append('<div class="row">' +
+                                '<div class="row">' + user.name +
+                                '</div>' +
+                                '<div class="row">' + user.email +
+                                '</div>' +
+                                '<div class="row">' + user.picture +
+                                '</div>' +
+                                '</div>'
+                        )
+                    })
+                })
+                .fail(function(jqXHR, textStatus, errorThrown) {
+                    console.log("HTTP Request Failed");
+                })
+                .always(function() {
+                    /* ... */
+                });
+    });
+</script>
+
+
+
+
+
+<!--make float button for top of page-->
 
 
 </body>

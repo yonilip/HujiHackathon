@@ -10,6 +10,11 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>GetLocal</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+
+    <script src="moment.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -20,6 +25,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- Custom styles for this template -->
     <link href="landingStyle.css" rel="stylesheet">
+    <script src="bootstrap-datetimepicker.js"></script>
+    <link href="bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+    <script src="landing.js"></script>
 </head>
 <!-- NAVBAR
 ================================================== -->
@@ -56,7 +65,9 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div>    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="landing.js"></script>
     </nav>
 </div>
 
@@ -67,16 +78,16 @@
             <div class="row" id="searchBar">
                 <div class="input-group">
                     <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Where to?">
+                        <input id="dest" type="text" class="form-control" placeholder="Where to?">
                     </div>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Choose Dates">
+                        <input type="text" class="form-control" id="datetimepicker4" placeholder="Choose Dates">
                     </div>
                     <div class="col-md-4">
                         <input type="text" class="form-control" placeholder="Interests">
                     </div>
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Search!</button>
+                        <button class="btn btn-default" type="button" id="searchButton">Search!</button>
                     </span>
                 </div>
             </div>
@@ -88,7 +99,7 @@
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<div class="container marketing">
+<div class="container marketing" id="firstPageAbout">
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
@@ -114,12 +125,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,34 @@
+
+---------------DataBase Fields----------------
+
+name
+
+city
+
+country
+
+interests
+
+id //unique set-up id for the specific profile post
+
+price
+
+rating
+
+numReviws
+
+selfQuote
+
+date
+
+-------------------------images--------------
+
+mainImg - profile image
+
+firstEnvImg - first image im the specific profile
+
+secondEnvImg - second image im the specific profile
+
+thirdEnvImg - third image im the specific profile
+
+-------------------------------------------------------------------

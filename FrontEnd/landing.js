@@ -5,10 +5,12 @@
 
 function insertResults(resultsArray) {
     var index;
+    var resultContainer = $("#iterationResults");
+    var list = [];
     for (index = 0; index < resultsArray.length; ++index) {
-        $(' <div id="resultTemplate">' +
+       list.push($(' <div id="resultTemplate" class="col-md-10 col-md-offset-1">' +
                 '<div class="row container">' +
-                    '<img src="'+ resultsArray[index].image+'" class="img-responsive" alt="Responsive image">' +
+                    '<img src="'+ resultsArray[index].mainImg+'" class="img-responsive" alt="Responsive image">' + //TODO this should have some fixed size
                 '</div>' +
                 '<div class="row">' +
                     '<div class="col-md-3 panel panel-default">' +
@@ -18,12 +20,12 @@ function insertResults(resultsArray) {
                 '</div>' +
                 '<div class="col-md-6 panel panel-default">' +
                     '<div class="panel-body">' +
-                        resultsArray[index].grade +
+                      '<img src="'+ resultsArray[index].rating+'" class="img-responsive" alt="Responsive image">' + //TODO this should have some fixed size
                     '</div>' +
                 '</div>' +
                 '<div class="col-md-3 panel panel-default">' +
                     '<div class="panel-body">' +
-            ' <span class="badge">'+resultsArray[index].reviews+'</span>' +
+            ' <span class="badge">'+resultsArray[index].numReviews +'</span>' +
                      '<p>Reviews</p>' +
                     '</div>' +
                 '</div>' +
@@ -32,15 +34,10 @@ function insertResults(resultsArray) {
 
             '</div>' +
             '</div>'
-        ).append(); //TODO check where to append to
+        )); //TODO check where to append to
     }
+    resultContainer.append(list);
 }
-
-
-//$("#chebox input[checked]").each
-
-
-
 
 
 
@@ -62,7 +59,6 @@ $(document).ready( function() {
         data.interests = selectedGroups[0];
 
         console.log(data);
-
         jQuery.ajax({
                 url: "http://getlocal1.rapidapi.io/db",
                 type: "POST",
@@ -73,11 +69,15 @@ $(document).ready( function() {
                 console.log("HTTP Request Succeeded: " + jqXHR.status);
                 console.log(data);
                 $("#firstPageAbout").hide(); //TODO here we should switch to 2nd page
+                //data = [{'mainImg':'11','price':'', 'rating':'', 'numReviws':''}];
                 insertResults(data);
             })
             .fail(function(jqXHR, textStatus, errorThrown) {
                 console
                     .log("HTTP Request Failed");
+                $("#firstPageAbout").hide(); //TODO here we should switch to 2nd page
+                //data = [{'mainImg':'11','price':'', 'rating':'', 'numReviws':''}, {'mainImg':'11','price':'', 'rating':'', 'numReviws':''}, {'mainImg':'11','price':'', 'rating':'', 'numReviws':''}];
+                insertResults(data);
             })
             .always(function() { //TODO probably del this
                 /* ... */

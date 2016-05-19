@@ -37,18 +37,34 @@ function insertResults(resultsArray) {
 }
 
 
+//$("#chebox input[checked]").each
+
+
+
+
+
 
 
 $(document).ready( function() {
 
-    $("#searchButton").click(fdatetimepickerunction(){
+    $("#searchButton").click(function(){
         var data ={}; //TODO can enter default values here
-        data.dest = $("#dest").val();
+        data.city = $("#dest").val();
         data.date = $("#datetimepicker4").val(); //TODO make null
-        data.interetst = $("#intrests").val(); //TODO make sure this will bring all the li as object (?)
+        //data.interetst = $("#intrests").val(); //TODO make sure this will bring all the li as object (?)
+
+        var selectedGroups  = new Array();
+        $(".checkbox input:checked").each(function() {
+            selectedGroups.push($(this).val());
+            console.log($(this).val());
+        });
+
+        data.interests = selectedGroups[0];
+
         console.log(data);
+
         jQuery.ajax({
-                url: "http://getlocal1.rapidapi.io/search",
+                url: "http://getlocal1.rapidapi.io/db",
                 type: "POST",
                 contentType: "application/x-www-form-urlencoded",
                 data: data

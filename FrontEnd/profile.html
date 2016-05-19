@@ -66,16 +66,16 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <!--<li class="dropdown">-->
-                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
-                            <!--<ul class="dropdown-menu">-->
-                                <!--<li><a href="#">Action</a></li>-->
-                                <!--<li><a href="#">Another action</a></li>-->
-                                <!--<li><a href="#">Something else here</a></li>-->
-                                <!--<li role="separator" class="divider"></li>-->
-                                <!--<li class="dropdown-header">Nav header</li>-->
-                                <!--<li><a href="#">Separated link</a></li>-->
-                                <!--<li><a href="#">One more separated link</a></li>-->
-                            <!--</ul>-->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+                        <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">Action</a></li>-->
+                        <!--<li><a href="#">Another action</a></li>-->
+                        <!--<li><a href="#">Something else here</a></li>-->
+                        <!--<li role="separator" class="divider"></li>-->
+                        <!--<li class="dropdown-header">Nav header</li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                        <!--<li><a href="#">One more separated link</a></li>-->
+                        <!--</ul>-->
                         <!--</li>-->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -90,23 +90,81 @@
 
 <!-- Header
 ================================================== -->
-<div class="row" style=" height: 368px; margin: 0 auto">
-    <div class="jumbotron">
+<div class="row" style=" height: 420px; margin: 0 auto">
+    <div class="jumbotron" style="background-image: url(profile_banner.jpg); background-size: cover; background-position: center;">
         <div class="container">
-            <div class="row" id="searchBar">
-                <div class="input-group">
-                    <div class="col-md-4">
-                        <input id="dest" type="text" class="form-control" placeholder="Where to?">
+            <div class="row" id="coverPhoto">
+                <div id="coverInfo">
+                    <div class="row" id="coverQuote" style=" float: left; height: 120px; width: 312px; margin: 50px">
+                        <div class="panel panel-default" style=" border: 0; background-color: rgba(65, 65, 65, 0.4); height: 120px; width: 312px;">
+                            <div class="panel-body" style="color: #ffffff">
+                                Basic panel example
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" id="datetimepicker4" placeholder="Choose Dates">
+
+                    <div class="row" id="coverData" style=" float: right; height: 282px; width: 318px; margin: 50px ">
+                        <div class="panel panel-default" style=" border: 0; background-color: rgba(65, 65, 65, 0.4); height: 282px; width: 318px;">
+                            <div class="row">
+                                <div class="col-md-4 col-md-offset-4" style="margin-top:20px; height: 70px; color: #ffffff">
+                                    Price
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-md-offset-4" style="height: 70px; color: #ffffff">
+                                    Rating
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a class="btn btn-primary" href="#" role="button" id="topMessageButton">Message</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Interests">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Profile Data
+================================================== -->
+
+<div class="row" >
+    <div class="jumbotron" style=" height: 314px; background-color: #414141; padding-top: 10px;margin: 0 auto">
+        <div class="container">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <h4 style="color:#ffffff; font-weight: bold; ">Daniel Jameson</h4>
+                        <h6 style="color:#A6A6A6;">London, England</h6>
                     </div>
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" id="searchButton">Search!</button>
-                    </span>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5 style="color: #039BE5"><img src="review.png" style="margin-right: 5px">9 reviews</h5>
+                    </div>
+                    <div class="col-md-3">
+                        <h5 style="color: #F57F17 "><img src="good_review.png" style="margin-right: 5px">2 positive</h5>
+                    </div>
+                    <div class="col-md-5">
+                        <h5 style="color: #A6A6A6 "><img src="work.png" style=" margin-right: 5px; margin-left: 10px;">Student</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <h5 style="color: #A6A6A6 "><img src="languages.png" style=" margin-right: 5px">Fluent in English, Hebrew. Basic French</h5>
+                    </div>
+                    <div class="col-md-5">
+                        <h5 style="color: #A6A6A6 "><img src="location.png" style="  margin-right: 5px"> From Tel Aviv, Israel</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5 style="color: #A6A6A6 "><img src="gender.png" style="  margin-right: 5px"> 25, Male</h5>
+                    </div>
                 </div>
             </div>
         </div>
@@ -115,30 +173,19 @@
 
 
 
-<!-- Profile Data
+
+<!-- Info
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<div class="container marketing">
+<div class="container row col-md-12">
+    <!--<div class="container marketing">-->
     <div class="col-md-3"></div>
     <div class="col-md-6">
-    <!--Reviews and Pricing -->
-    <div class="row">
-        <!--<div class="col-md-6 col-md-offset-3">-->
 
-        <!--</div>-->
-    </div>
-
-    <!--Info -->
-    <div class="row">
-        <!--<div class="col-md-6 col-md-offset-3">-->
-
-        <!--</div>-->
-    </div>
-
-    <!--About Me -->
-    <div class="row featurette">
-        <!--<div class="col-md-6 col-md-offset-3">-->
+        <!--About Me -->
+        <div class="row featurette">
+            <!--<div class="col-md-6 col-md-offset-3">-->
             <h2 class="featurette-heading">About Me</h2>
             <h4 class="featurette-text">This book is a record of a pleasure trip. If it were a record of a solemn
                 scientific expedition, it would have about it that gravity, that profundity, and that impressive
@@ -146,12 +193,12 @@
                 I offer no apologies for any departures from the usual style of travel-writing that may be charged
                 against me—for I think I have seen with impartial eyes, and I am sure I have written at least honestly,
                 whether wisely or not.</h4>
-        <!--</div>-->
-    </div>
+            <!--</div>-->
+        </div>
 
-    <!--Gallery -->
-    <div class="row">
-        <!--<div class="col-md-6 col-md-offset-3">-->
+        <!--Gallery -->
+        <div class="row">
+            <!--<div class="col-md-6 col-md-offset-3">-->
             <div id="Carousel" class="carousel slide" style=" height:450px; width: 450px; margin: 0 auto">
                 <ol class="carousel-indicators">
                     <li data-target="#Carousel" data-slide-to="0" class="active"></li>
@@ -177,48 +224,12 @@
                 <a class="right carousel-control" href="#Carousel" data-slide="next">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
-            <!--</div>-->
-            <!--<div id="myCarousel" class="carousel slide" data-ride="carousel" style="height:400px;  width: 400px; margin: 0 auto">-->
-                <!--&lt;!&ndash; Indicators &ndash;&gt;-->
-                <!--&lt;!&ndash;<ol class="carousel-indicators">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<li data-target="#myCarousel" data-slide-to="0" class="active"></li>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<li data-target="#myCarousel" data-slide-to="1"></li>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<li data-target="#myCarousel" data-slide-to="2"></li>&ndash;&gt;-->
-                <!--&lt;!&ndash;</ol>&ndash;&gt;-->
-
-                <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
-
-                <!--<div class="carousel-inner" role="listbox">-->
-                    <!--<div class="item active">-->
-                        <!--<img src="val2.jpg" alt="">-->
-                    <!--</div>-->
-
-                    <!--<div class="item">-->
-                        <!--<img src="val1.jpg" alt="">-->
-                    <!--</div>-->
-
-                    <!--<div class="item">-->
-                        <!--<img src="val2.jpg" alt="">-->
-                    <!--</div>-->
-                <!--</div>-->
-
-
-                <!--&lt;!&ndash; Left and right controls &ndash;&gt;-->
-                <!--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">-->
-                    <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-                    <!--<span class="sr-only">Previous</span>-->
-                <!--</a>-->
-                <!--<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">-->
-                    <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                    <!--<span class="sr-only">Next</span>-->
-                <!--</a>-->
-            <!--</div>-->
+            </div>
         </div>
-    </div>
 
-    <!--About My Tour -->
-    <div class="row featurette">
-        <!--<div class="col-md-6 col-md-offset-3">-->
+        <!--About My Tour -->
+        <div class="row featurette">
+            <!--<div class="col-md-6 col-md-offset-3">-->
             <h2 class="featurette-heading">About My Tour</h2>
             <h4 class="featurette-text">For months the great pleasure excursion to Europe and the Holy Land was chatted
                 about in the newspapers everywhere in America and discussed at countless firesides. It was a novelty in
@@ -230,22 +241,22 @@
                 household in the land. Who could read the program of the excursion without longing to make one
                 of the party? I will insert it here. It is almost as good as a map. </h4>
 
-        <!--</div>-->
-    </div>
+            <!--</div>-->
         </div>
+    </div>
     <div class="col-md-3"></div>
 
     <!--Message Button -->
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-        <button type="button" class="btn btn-primary btn-lg btn-block">Message</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Message</button>
         </div>
     </div>
 
     <!-- FOOTER -->
     <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2016 HujiHackathon </p>
+        <p style="margin-left:20px ">&copy; 2016 HujiHackathon </p>
     </footer>
 
 </div><!-- /.container -->

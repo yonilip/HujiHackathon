@@ -46,7 +46,7 @@ function insertResults(resultsArray) {
 
 
 $(document).ready( function() {
-
+    $("#datetimepicker4").datetimepicker({'format':'YYYY-MM-DD'});
     $("#searchButton").click(function(){
         var data ={}; //TODO can enter default values here
         data.city = $("#dest").val();

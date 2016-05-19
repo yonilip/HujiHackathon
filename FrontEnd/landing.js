@@ -8,7 +8,8 @@ function insertResults(resultsArray) {
     var resultContainer = $("#iterationResults");
     var list = [];
     for (index = 0; index < resultsArray.length; ++index) {
-       list.push($(' <div id="resultTemplate" class="col-md-10 col-md-offset-1">' +
+        console.log("resultTemplate"+index.toString());
+       list.push($(' <div id="resultTemplate'+index.toString()+'" class="profile-wrapper col-md-10 col-md-offset-1">' +
                 '<div class="row container">' +
                     '<img src="'+ resultsArray[index].mainImg+'" class="img-responsive" alt="Responsive image">' + //TODO this should have some fixed size
                 '</div>' +
@@ -34,9 +35,14 @@ function insertResults(resultsArray) {
 
             '</div>' +
             '</div>'
-        )); //TODO check where to append to
+       )); //TODO check where to append to
     }
     resultContainer.append(list);
+    $(".profile-wrapper").unbind().click(function(){
+        num = $(this).attr('id').replace('resultTemplate','');
+        console.log(num);
+        console.log(curSearchResults[num]);
+    });
 }
 
 

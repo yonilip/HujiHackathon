@@ -1,7 +1,7 @@
 /**
  * Created by yonilip on 5/19/16.
  */
-
+var curSearchResults;
 
 function insertResults(resultsArray) {
     var index;
@@ -71,6 +71,7 @@ $(document).ready( function() {
                 $("#firstPageAbout").hide(); //TODO here we should switch to 2nd page
                 //data = [{'mainImg':'11','price':'', 'rating':'', 'numReviws':''}];
                 insertResults(data);
+                curSearchResults = data;
             })
             .fail(function(jqXHR, textStatus, errorThrown) {
                 console

@@ -10,23 +10,33 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>GetLocal</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 
 
-    <script src="moment.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
+
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script-->
+
     <!-- Custom styles for this template -->
+
     <link href="landingStyle.css" rel="stylesheet">
-    <script src="bootstrap-datetimepicker.js"></script>
     <link href="bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script type="text/javascript"  src="jquery-1.12.3.min.js"></script>
+    <script type="text/javascript"  src="moment.min.js"></script>
+    <script type="text/javascript" src="transition.js"></script>
+    <script type="text/javascript" src="collapse.js"></script>
+    <script type="text/javascript"  src="bootstrap.min.js"></script>
+    <script type="text/javascript"  src="bootstrap-datetimepicker.js"></script>
 
     <script src="landing.js"></script>
 </head>
@@ -65,9 +75,7 @@
                     </li>
                 </ul>
             </div>
-        </div>    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="landing.js"></script>
+        </div>
     </nav>
 </div>
 
@@ -83,8 +91,40 @@
                     <div class="col-md-4">
                         <input type="text" class="form-control" id="datetimepicker4" placeholder="Choose Dates">
                     </div>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Interests">
+                    <div class="col-md-4 dropdown">
+                        <input type="text" class="form-control dropdown-toggle" placeholder="Interests" id="intrests" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <ol class="dropdown-menu" aria-labelledby="intrests">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    Sightseeing
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    Architecture
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    Food
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    Music
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    Nightlife
+                                </label>
+                            </div>
+                        </ol>
                     </div>
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button" id="searchButton">Search!</button>
@@ -96,7 +136,7 @@
 </div>
 
 <!-- Marketing messaging and featurettes
-================================================== -->
+====================container to============================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
 <div class="container marketing" id="firstPageAbout">
@@ -119,12 +159,38 @@
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
+</div>
+
+<!--result template-->
+<div id="resultTemplate">
+    <div class="row">
+        <img src="..." class="img-responsive" alt="Responsive image">
+    </div>
+    <div class="row">
+        <div class="col-md-3 panel panel-default">
+            <div class="panel-body">
+                300$
+            </div>
+        </div>
+        <div class="col-md-6 panel panel-default">
+            <div class="panel-body">
+
+            </div>
+        </div>
+        <div class="col-md-3 panel panel-default">
+            <div class="panel-body">
+                reviews <span class="badge">4</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+    </div>
+</div>
 
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+
 
 </body>
 </html>

@@ -4,6 +4,8 @@
 
 body {
   padding-bottom: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
   color: #5a5a5a;
 }
 
@@ -42,10 +44,17 @@ body {
 
 }
 
+.jumbotron {
+  background: url("bg_picture_landingpage.jpg") no-repeat center;
+  /*background-image: url("bg_picture_landingpage.jpg");*/
+  /*background-repeat: no-repeat;*/
+
+}
 
 .input-group {
-  padding-top: 20%;
+padding-top: 50%;
 }
+
 
 /* MARKETING CONTENT
 -------------------------------------------------- */

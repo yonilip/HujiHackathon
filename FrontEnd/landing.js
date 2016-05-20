@@ -47,7 +47,25 @@ function insertResults(resultsArray) {
 }
 
 
+/*
+assume left key link to the prv profile
+ */
+var checkSwap = (function (curIndex, leftKeyAttr, rightKeyAttr){
+    if(curIndex != 0) {
+        //display command for leftKeyAttr ( left key)
+        $(leftKeyAttr.toString()).unbind().click(function () {
+            // call display profile method param = curIndex-1
+        });
+    }
+    if(curIndex != curSearchResults.length)
+    {
+        //display command for  rightKeyAttr
+        $(rightKeyAttr.toString()).unbind().click(function(){
+            // call display profile method param = curIndex+1
+        });
+    }
 
+});
 
 $(document).ready( function() {
     $("#datetimepicker4").datetimepicker({'format':'YYYY-MM-DD'});

@@ -1,14 +1,17 @@
 /**
  * Created by yonilip on 5/19/16.
  */
-
+var curSearchResults;
 
 function insertResults(resultsArray) {
     var index;
+    var resultContainer = $("#iterationResults");
+    var list = [];
     for (index = 0; index < resultsArray.length; ++index) {
-        $(' <div id="resultTemplate">' +
+        console.log("resultTemplate"+index.toString());
+       list.push($(' <div id="resultTemplate'+index.toString()+'" class="profile-wrapper col-md-10 col-md-offset-1">' +
                 '<div class="row container">' +
-                    '<img src="'+ resultsArray[index].image+'" class="img-responsive" alt="Responsive image">' +
+                    '<img src="'+ resultsArray[index].mainImg+'" class="img-responsive" alt="Responsive image">' + //TODO this should have some fixed size
                 '</div>' +
                 '<div class="row">' +
                     '<div class="col-md-3 panel panel-default">' +
@@ -18,12 +21,12 @@ function insertResults(resultsArray) {
                 '</div>' +
                 '<div class="col-md-6 panel panel-default">' +
                     '<div class="panel-body">' +
-                        resultsArray[index].grade +
+                      '<img src="'+ resultsArray[index].rating+'" class="img-responsive" alt="Responsive image">' + //TODO this should have some fixed size
                     '</div>' +
                 '</div>' +
                 '<div class="col-md-3 panel panel-default">' +
                     '<div class="panel-body">' +
-            ' <span class="badge">'+resultsArray[index].reviews+'</span>' +
+            ' <span class="badge">'+resultsArray[index].numReviews +'</span>' +
                      '<p>Reviews</p>' +
                     '</div>' +
                 '</div>' +
@@ -32,23 +35,38 @@ function insertResults(resultsArray) {
 
             '</div>' +
             '</div>'
-        ).append(); //TODO check where to append to
+       )); //TODO check where to append to
     }
+    resultContainer.append(list);
+    $(".profile-wrapper").unbind().click(function(){
+        num = $(this).attr('id').replace('resultTemplate','');
+        console.log(num);
+        console.log(curSearchResults[num]);
+    });
 }
 
 
 
 
 $(document).ready( function() {
-
-    $("#searchButton").click(fdatetimepickerunction(){
+    $("#datetimepicker4").datetimepicker({'format':'YYYY-MM-DD'});
+    $("#searchButton").click(function(){
         var data ={}; //TODO can enter default values here
-        data.dest = $("#dest").val();
+        data.city = $("#dest").val();
         data.date = $("#datetimepicker4").val(); //TODO make null
-        data.interetst = $("#intrests").val(); //TODO make sure this will bring all the li as object (?)
+        //data.interetst = $("#intrests").val(); //TODO make sure this will bring all the li as object (?)
+
+        var selectedGroups  = new Array();
+        $(".checkbox input:checked").each(function() {
+            selectedGroups.push($(this).val());
+            console.log($(this).val());
+        });
+
+        data.interests = selectedGroups[0];
+
         console.log(data);
         jQuery.ajax({
-                url: "http://getlocal1.rapidapi.io/search",
+                url: "http://getlocal1.rapidapi.io/db",
                 type: "POST",
                 contentType: "application/x-www-form-urlencoded",
                 data: data
@@ -57,11 +75,16 @@ $(document).ready( function() {
                 console.log("HTTP Request Succeeded: " + jqXHR.status);
                 console.log(data);
                 $("#firstPageAbout").hide(); //TODO here we should switch to 2nd page
+                //data = [{'mainImg':'11','price':'', 'rating':'', 'numReviws':''}];
                 insertResults(data);
+                curSearchResults = data;
             })
             .fail(function(jqXHR, textStatus, errorThrown) {
                 console
                     .log("HTTP Request Failed");
+                $("#firstPageAbout").hide(); //TODO here we should switch to 2nd page
+                //data = [{'mainImg':'11','price':'', 'rating':'', 'numReviws':''}, {'mainImg':'11','price':'', 'rating':'', 'numReviws':''}, {'mainImg':'11','price':'', 'rating':'', 'numReviws':''}];
+                insertResults(data);
             })
             .always(function() { //TODO probably del this
                 /* ... */

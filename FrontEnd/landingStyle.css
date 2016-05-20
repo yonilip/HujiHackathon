@@ -3,9 +3,8 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-bottom: 40px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 0;
+  margin: 0;
   color: #5a5a5a;
 }
 
@@ -41,11 +40,19 @@ body {
 }
 
 #searchBar {
-
+  position: relative;
+  top: -300px;
+  width: 70%;
+  margin: 0 auto;
+}
+#searchBar .col-md-4 {
+  padding:0px;
 }
 
+
 .jumbotron {
-  background: url("bg_picture_landingpage.jpg") no-repeat center;
+  background: url("http://getlocal1.rapidapi.io/landingpage_bg_image_4jpg.jpg");
+  background-size: cover;
   /*background-image: url("bg_picture_landingpage.jpg");*/
   /*background-repeat: no-repeat;*/
 

@@ -82,52 +82,51 @@
 
 <div class="row">
     <div class="jumbotron">
-        <div class="container">
+        <div style="width: 100%">
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4" style="background-color: rgba(0, 0, 0, 0.3); text-align: center; top: 200px;">
+                    <h1 style="color: white">GET TO A NEW CITY</h1>
+                </div>
+            </div>
+
             <div class="row" id="searchBar">
                 <div class="input-group">
                     <div class="col-md-4">
-                        <input id="dest" type="text" class="form-control" placeholder="Where to?">
+                        <input id="dest" type="text" class="form-control" placeholder="Where to?" style="border-radius: 5px 0px 0px 5px">
                     </div>
                     <div class="col-md-4">
                         <input type="text" class="form-control" id="datetimepicker4" placeholder="Choose Dates">
                     </div>
                     <div class="col-md-4 dropdown">
-                        <input type="text" class="form-control dropdown-toggle" placeholder="Interests" id="intrests" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <input type="text" class="form-control dropdown-toggle" placeholder="Interests" id="intrests" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="border-radius: 0px">
                         <ol class="dropdown-menu" aria-labelledby="intrests">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="">
+                                    <input type="checkbox" value="Sightseeing" >
                                     Sightseeing
                                 </label>
-                            </div>
-                            <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="">
+                                    <input type="checkbox"  value="Architecture">
                                     Architecture
                                 </label>
-                            </div>
-                            <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="">
+                                    <input type="checkbox" value="Food">
                                     Food
                                 </label>
-                            </div>
-                            <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="">
+                                    <input type="checkbox" value="Music">
                                     Music
                                 </label>
-                            </div>
-                            <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="">
+                                    <input type="checkbox" value="Nightlife">
                                     Nightlife
                                 </label>
                             </div>
                         </ol>
                     </div>
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" id="searchButton">Search!</button>
+                        <button class="btn btn-primary" type="button" id="searchButton">Search!</button>
                     </span>
                 </div>
             </div>
@@ -160,6 +159,15 @@
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 </div>
+
+
+<div id="iterationResults">
+
+</div>
+
+
+
+
 
 <!--result template-->
 <!--

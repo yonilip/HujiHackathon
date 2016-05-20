@@ -97,6 +97,20 @@ padding-top: 50%;
 }
 
 
+#leftAr {
+  position: relative ;
+  top: 120px;
+  left: -120px;
+}
+
+#rightAr {
+  position: relative;
+  top: 120px;
+  right: -1200px;
+
+}
+
+
 /* MARKETING CONTENT
 -------------------------------------------------- */
 

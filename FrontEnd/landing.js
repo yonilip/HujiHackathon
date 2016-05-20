@@ -51,6 +51,16 @@ function insertResults(resultsArray) {
 }
 
 var endOfFunc =
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+
+    '<div class="container row col-md-12">' +
+    '<div class="col-md-3"></div>' +
+    '<div class="col-md-6">' +
 '<div class="row featurette">' +
 '<h2 class="featurette-heading">About Me</h2>' +
 '<h4 class="featurette-text">'+'This book is a record of a pleasure trip. If it were a record of a solemn' +
@@ -70,13 +80,13 @@ var endOfFunc =
 
 '<div class="carousel-inner">' +
 '<div class="item active">' +
-'<img src="http://getlocal1.rapidapi.io/b552823e2e949c0a1fd061c267968786jpg.jpg" alt="Slide 1">' +
+'<img src="http://getlocal1.rapidapi.io/1jpg.jpg" alt="Slide 1">' +
 '</div>' +
 '<div class="item">' +
-'<img src="http://getlocal1.rapidapi.io/jerusalem8jpg.jpg" alt="Slide 2">' +
+'<img src="http://getlocal1.rapidapi.io/2jpg.jpg" alt="Slide 2">' +
 '</div>' +
 '<div class="item">' +
-'<img src="http://getlocal1.rapidapi.io/val3jpg.jpg" alt="Slide 3">' +
+'<img src="http://getlocal1.rapidapi.io/3jpg.jpg" alt="Slide 3">' +
 '</div>' +
 '</div>' +
 
@@ -125,6 +135,12 @@ function makeProfilePage(num) {
         '<div class="jumbotron" style="background-image: url('+curSearchResults[num].mainImg+'); background-size: cover; background-position: center;">' + //TODO change image
         '<div class="container">' +
         '<div class="row" id="coverPhoto">' +
+            '<button type="button" class="btn btn-default btn-lg" id="leftAr">' +
+        '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>' +
+        '</button>' +
+        '<button type="button" class="btn btn-default btn-lg" id="rightAr">' +
+        '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>' +
+        '</button>' +
         '<div id="coverInfo">' +
         '<div class="row" id="coverQuote" style=" float: left; height: 120px; width: 312px; margin: 50px">' +
         '<div class="panel panel-default" style=" border: 0; background-color: rgba(65, 65, 65, 0.4); height: 120px; width: 312px;">' +
@@ -189,21 +205,12 @@ function makeProfilePage(num) {
     '</div>' +
     '<div class="row">' +
         '<div class="col-md-3">' +
-        '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/genderpng.png" style="  margin-right: 5px">'+curSearchResults[num].age+', '+curSearchResults[num].gender+'</h5>' +
-    '</div>' +
-    '</div>' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-
-    '<div class="container row col-md-12">' +
-        '<div class="col-md-3"></div>' +
-        '<div class="col-md-6">'
+        '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/genderpng.png" style="  margin-right: 5px">'+curSearchResults[num].age+', '+curSearchResults[num].gender+'</h5>'
 
     ));
 
     profileContainer.append(endOfFunc);
+    checkSwap(num);
 }
 
 /*

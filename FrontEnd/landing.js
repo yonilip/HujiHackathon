@@ -9,9 +9,11 @@ function insertResults(resultsArray) {
     var list = [];
     for (index = 0; index < resultsArray.length; ++index) {
         console.log("resultTemplate"+index.toString());
-       list.push($(' <div id="resultTemplate'+index.toString()+'" class="profile-wrapper col-md-10 col-md-offset-1">' +
-                '<div class="row container">' +
-                    '<img src="'+ resultsArray[index].mainImg+'" class="img-responsive" alt="Responsive image">' + //TODO this should have some fixed size
+       list.push($(' <div id="resultTemplate'+index.toString()+'" class="profile-wrapper row">' +
+                '<div class="row" id="imageResult">' +
+               '<div class="col-md-12">' +
+                    '<img src="'+ resultsArray[index].mainImg+'" alt="Responsive image">' + //TODO this should have some fixed size
+           '</div>' +
                 '</div>' +
 
            '<div class="row" >' +
@@ -26,7 +28,7 @@ function insertResults(resultsArray) {
            '</div>' +
            '<div class="col-md-4 panel panel-default">' +
            '<div class="panel-body">' +
-           '<img src="'+ resultsArray[index].rating+'" class="img-responsive" alt="Responsive image">' +
+           '<img src="http://getlocal1.rapidapi.io/rankingpng.png" class="img-responsive" alt="Responsive image">' +
            '</div>' +
            '</div>' +
            '<div class="col-md-4 panel panel-default">' +
@@ -57,6 +59,7 @@ function insertResults(resultsArray) {
         $("#firstPageAbout").hide();
         $(".jumbotron").hide();
         makeProfilePage(num);
+        //$('html, body').
     });
 }
 
@@ -141,16 +144,10 @@ var endOfFunc =
 function makeProfilePage(num) {
     var profileContainer = $('#profilePage');
 
-    profileContainer.append($('<div class="row" style=" height: 420px; margin: 0 auto">' +
-        '<div class="jumbotron" style="background-image: url('+curSearchResults[num].mainImg+'); background-size: cover; background-position: center;">' + //TODO change image
+    profileContainer.append($('<div class="row" style=" height: 620px; margin: 0 auto">' +
+        '<div class="jumbotron" style="background-image: url('+curSearchResults[num].mainImg+');" id="thirdImage">' + //TODO change image
         '<div class="container">' +
         '<div class="row" id="coverPhoto">' +
-            //'<button type="button" class="btn btn-default btn-lg" id="leftAr">' +
-        //'<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>' +
-        //'</button>' +
-        //'<button type="button" class="btn btn-default btn-lg" id="rightAr">' +
-        //'<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>' +
-        //'</button>' +
         '<div id="coverInfo">' +
         '<div class="row" id="coverQuote" style=" float: left; height: 120px; width: 312px; margin: 50px">' +
         '<div class="panel panel-default" style=" border: 0; background-color: rgba(65, 65, 65, 0.4); height: 120px; width: 312px;">' +

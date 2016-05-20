@@ -13,24 +13,34 @@ function insertResults(resultsArray) {
                 '<div class="row container">' +
                     '<img src="'+ resultsArray[index].mainImg+'" class="img-responsive" alt="Responsive image">' + //TODO this should have some fixed size
                 '</div>' +
-                '<div class="row">' +
-                    '<div class="col-md-3 panel panel-default">' +
-                '<div class="panel-body">' +
-                    resultsArray[index].price +
-                    '</div>' +
-                '</div>' +
-                '<div class="col-md-6 panel panel-default">' +
-                    '<div class="panel-body">' +
-                      '<img src="'+ resultsArray[index].rating+'" class="img-responsive" alt="Responsive image">' + //TODO this should have some fixed size
-                    '</div>' +
-                '</div>' +
-                '<div class="col-md-3 panel panel-default">' +
-                    '<div class="panel-body">' +
-            ' <span class="badge">'+resultsArray[index].numReviews +'</span>' +
-                     '<p>Reviews</p>' +
-                    '</div>' +
-                '</div>' +
-            '</div>' +
+
+           '<div class="row" >' +
+           //'<div class="panel panel-default" style=" border: 0; background-color: rgba(65, 65, 65, 0.4); height: 282px; width: 318px;">' +
+           '<div class="row">' +
+           '<div class="col-md-4 col-md-offset-4" >' +
+           '<div class="row">' +
+           '<div class="col-md-4 panel panel-default">' +
+           '<div class="panel-body">' +
+           resultsArray[index].price +
+           '</div>' +
+           '</div>' +
+           '<div class="col-md-4 panel panel-default">' +
+           '<div class="panel-body">' +
+           '<img src="'+ resultsArray[index].rating+'" class="img-responsive" alt="Responsive image">' +
+           '</div>' +
+           '</div>' +
+           '<div class="col-md-4 panel panel-default">' +
+           '<div class="panel-body">' +
+           '<span class="badge">'+resultsArray[index].numReviews +'</span>' +
+           '<p>Reviews</p>' +
+           '</div>' +
+           '</div>' +
+           '</div>' +
+           '</div>' +
+           '</div>' +
+           '</div>' +
+           '</div>' +
+
             '<div class="row">' +
 
             '</div>' +

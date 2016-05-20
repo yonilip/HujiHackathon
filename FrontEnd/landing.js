@@ -135,12 +135,12 @@ function makeProfilePage(num) {
         '<div class="jumbotron" style="background-image: url('+curSearchResults[num].mainImg+'); background-size: cover; background-position: center;">' + //TODO change image
         '<div class="container">' +
         '<div class="row" id="coverPhoto">' +
-            '<button type="button" class="btn btn-default btn-lg" id="leftAr">' +
-        '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>' +
-        '</button>' +
-        '<button type="button" class="btn btn-default btn-lg" id="rightAr">' +
-        '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>' +
-        '</button>' +
+            //'<button type="button" class="btn btn-default btn-lg" id="leftAr">' +
+        //'<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>' +
+        //'</button>' +
+        //'<button type="button" class="btn btn-default btn-lg" id="rightAr">' +
+        //'<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>' +
+        //'</button>' +
         '<div id="coverInfo">' +
         '<div class="row" id="coverQuote" style=" float: left; height: 120px; width: 312px; margin: 50px">' +
         '<div class="panel panel-default" style=" border: 0; background-color: rgba(65, 65, 65, 0.4); height: 120px; width: 312px;">' +
@@ -191,12 +191,12 @@ function makeProfilePage(num) {
     '<div class="col-md-3">' +
         '<h5 style="color: #F57F17 "><img src="http://getlocal1.rapidapi.io/good_reviewpng.png" style="margin-right: 5px">'+curSearchResults[num].numPosReviews+' Positive</h5>' +
     '</div>' +
-    '<div class="col-md-5">' +
-        '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/workpng.png" style=" margin-right: 5px; margin-left: 10px;">'+curSearchResults[num].occupation+'</h5>' +
+    '<div class="col-md-4">' +
+        '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/workpng.png" style=" margin-right: 5px; ">'+curSearchResults[num].occupation+'</h5>' +
         '</div>' +
         '</div>' +
         '<div class="row">' +
-        '<div class="col-md-7">' +
+        '<div class="col-md-6">' +
         '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/languagespng.png" style=" margin-right: 5px">'+curSearchResults[num].languages+'</h5>' +
     '</div>' +
     '<div class="col-md-5">' +
@@ -204,7 +204,7 @@ function makeProfilePage(num) {
     '</div>' +
     '</div>' +
     '<div class="row">' +
-        '<div class="col-md-3">' +
+        '<div class="col-md-4">' +
         '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/genderpng.png" style="  margin-right: 5px">'+curSearchResults[num].age+', '+curSearchResults[num].gender+'</h5>'
 
     ));

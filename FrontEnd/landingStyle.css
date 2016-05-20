@@ -90,6 +90,24 @@ body {
 padding-top: 50%;
 }
 
+
+.featurette-heading h2 {
+  /*margin: 30px 0;*/
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.featurette-text h4 {
+  margin: 10px 0;
+  font-weight: normal;
+  line-height: 300px;
+  letter-spacing: 20px;
+
+}
+
+
+
 .footer {
     padding-top: 19px;
     color: #777;
@@ -97,18 +115,18 @@ padding-top: 50%;
 }
 
 
-#leftAr {
-  position: relative ;
-  top: 120px;
-  left: -120px;
-}
+/*#leftAr {*/
+  /*position: static ;*/
+  /*top: 120px;*/
+  /*left: -500px;*/
+/*}*/
 
-#rightAr {
-  position: relative;
-  top: 120px;
-  right: -1200px;
+/*#rightAr {*/
+  /*position: static;*/
+  /*top: 120px;*/
+  /*right: -1200px;*/
 
-}
+/*}*/
 
 
 /* MARKETING CONTENT
@@ -156,14 +174,40 @@ padding-top: 50%;
     line-height: 1.4;
   }
 
+
+  .container-narrow > hr {
+    margin: 30px 0;
+  }
+
+  /* Main marketing message and sign up button */
+  .jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  /*.jumbotron .btn {*/
+    /*padding: 14px 24px;*/
+    /*font-size: 21px;*/
+
+  /*}*/
+
   .featurette-heading {
-    font-size: 50px;
+    font-size: 40px;
+    margin-top: 50px;
+
+  }
+
+  .featurette-text{
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 30px ;
+
   }
 }
 
 @media (min-width: 992px) {
   .featurette-heading {
-    margin-top: 120px;
+    margin-top: 70px;
   }
 
     .footer {
@@ -171,4 +215,20 @@ padding-top: 50%;
          padding-right: 0;
          padding-left: 0;
      }
+
+  .featurette-text{
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 50px ;
+
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 50px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
 }

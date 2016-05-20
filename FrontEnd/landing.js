@@ -38,6 +38,7 @@ function insertResults(resultsArray) {
        )); //TODO check where to append to
     }
     resultContainer.append(list);
+
     $(".profile-wrapper").unbind().click(function(){
         num = $(this).attr('id').replace('resultTemplate','');
         console.log(num);

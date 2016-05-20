@@ -78,7 +78,7 @@ body {
 }
 
 
-.jumbotron {
+#landing-jumbo {
   background: url("http://getlocal1.rapidapi.io/landingpage_bg_image_4jpg.jpg");
   background-size: cover;
   /*background-image: url("bg_picture_landingpage.jpg");*/

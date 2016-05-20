@@ -22,7 +22,7 @@ function insertResults(resultsArray) {
            '<div class="col-md-4 col-md-offset-4" >' +
            '<div class="row">' +
            '<div class="col-md-4 panel panel-default">' +
-           '<div class="panel-body">' +
+           '<div class="panel-body" id="pricePanel">' +
            resultsArray[index].price +
            '</div>' +
            '</div>' +
@@ -32,7 +32,7 @@ function insertResults(resultsArray) {
            '</div>' +
            '</div>' +
            '<div class="col-md-4 panel panel-default">' +
-           '<div class="panel-body">' +
+           '<div class="panel-body" id="numRev">' +
            '<span class="badge">'+resultsArray[index].numReviews +'</span>' +
            '<p>Reviews</p>' +
            '</div>' +
@@ -148,6 +148,14 @@ function makeProfilePage(num) {
         '<div class="jumbotron" style="background-image: url('+curSearchResults[num].mainImg+');" id="thirdImage">' + //TODO change image
         '<div class="container">' +
         '<div class="row" id="coverPhoto">' +
+/*        '<div id="coverArrows" style="margin-top: 80px">' +
+        '<button type="button" class="btn btn-default pull-left" id="LArrow" aria-label="Left Align">' +
+        '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>' +
+        '</button>' +
+
+        '<button type="button" id="RArrow" class="btn btn-default btn-lg pull-right">' +
+        '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>' +
+        '</button></div>' +*/
         '<div id="coverInfo">' +
         '<div class="row" id="coverQuote" style=" float: left; height: 120px; width: 312px; margin: 50px">' +
         '<div class="panel panel-default" style=" border: 0; background-color: rgba(65, 65, 65, 0.4); height: 120px; width: 312px;">' +
@@ -212,7 +220,7 @@ function makeProfilePage(num) {
     '</div>' +
     '<div class="row">' +
         '<div class="col-md-4">' +
-        '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/genderpng.png" style="  margin-right: 5px">'+curSearchResults[num].age+', '+curSearchResults[num].gender+'</h5>'
+        '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/genderpng.png" style="  margin-right: 10px">'+curSearchResults[num].age+', '+curSearchResults[num].gender+'</h5>'
 
     ));
 
@@ -225,16 +233,18 @@ assume left key link to the prv profile
  */
 var checkSwap = (function (curIndex, leftKeyAttr, rightKeyAttr){
     if(curIndex != 0) {
-        //display command for leftKeyAttr ( left key)
-        $(leftKeyAttr.toString()).unbind().click(function () {
+        $('#LArrow').visible();
+        $('#LArrow').unbind().click(function () {
             // call display profile method param = curIndex-1
+            makeProfilePage(curIndex-1);
         });
     }
     if(curIndex != curSearchResults.length)
     {
-        //display command for  rightKeyAttr
-        $(rightKeyAttr.toString()).unbind().click(function(){
+        $('#RArrow').visible();
+        $('#RArrow').unbind().click(function(){
             // call display profile method param = curIndex+1
+            makeProfilePage(curIndex+1);
         });
     }
 

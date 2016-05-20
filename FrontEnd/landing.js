@@ -28,7 +28,7 @@ function insertResults(resultsArray) {
            '</div>' +
            '<div class="col-md-4 panel panel-default">' +
            '<div class="panel-body">' +
-           '<img src="http://getlocal1.rapidapi.io/rankingpng.png" class="img-responsive" alt="Responsive image">' +
+           '<img src="https://getlocal1.rapidapi.io/rankingpng.png" class="img-responsive" alt="Responsive image">' +
            '</div>' +
            '</div>' +
            '<div class="col-md-4 panel panel-default">' +
@@ -93,13 +93,13 @@ var endOfFunc =
 
 '<div class="carousel-inner">' +
 '<div class="item active">' +
-'<img src="http://getlocal1.rapidapi.io/1jpg.jpg" alt="Slide 1">' +
+'<img src="https://getlocal1.rapidapi.io/1jpg.jpg" alt="Slide 1">' +
 '</div>' +
 '<div class="item">' +
-'<img src="http://getlocal1.rapidapi.io/2jpg.jpg" alt="Slide 2">' +
+'<img src="https://getlocal1.rapidapi.io/2jpg.jpg" alt="Slide 2">' +
 '</div>' +
 '<div class="item">' +
-'<img src="http://getlocal1.rapidapi.io/3jpg.jpg" alt="Slide 3">' +
+'<img src="https://getlocal1.rapidapi.io/3jpg.jpg" alt="Slide 3">' +
 '</div>' +
 '</div>' +
 
@@ -148,14 +148,6 @@ function makeProfilePage(num) {
         '<div class="jumbotron" style="background-image: url('+curSearchResults[num].mainImg+');" id="thirdImage">' + //TODO change image
         '<div class="container">' +
         '<div class="row" id="coverPhoto">' +
-/*        '<div id="coverArrows" style="margin-top: 80px">' +
-        '<button type="button" class="btn btn-default pull-left" id="LArrow" aria-label="Left Align">' +
-        '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>' +
-        '</button>' +
-
-        '<button type="button" id="RArrow" class="btn btn-default btn-lg pull-right">' +
-        '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>' +
-        '</button></div>' +*/
         '<div id="coverInfo">' +
         '<div class="row" id="coverQuote" style=" float: left; height: 120px; width: 312px; margin: 50px">' +
         '<div class="panel panel-default" style=" border: 0; background-color: rgba(65, 65, 65, 0.4); height: 120px; width: 312px;">' +
@@ -201,26 +193,26 @@ function makeProfilePage(num) {
     '</div>' +
     '<div class="row">' +
         '<div class="col-md-3">' +
-        '<h5 style="color: #039BE5"><img src="'+'http://getlocal1.rapidapi.io/reviewpng.png'+'" style="margin-right: 5px">'+curSearchResults[num].numReviews+' Reviews</h5>' +
+        '<h5 style="color: #039BE5"><img src="'+'https://getlocal1.rapidapi.io/reviewpng.png'+'" style="margin-right: 5px">'+curSearchResults[num].numReviews+' Reviews</h5>' +
     '</div>' +
     '<div class="col-md-3">' +
-        '<h5 style="color: #F57F17 "><img src="http://getlocal1.rapidapi.io/good_reviewpng.png" style="margin-right: 5px">'+curSearchResults[num].numPosReviews+' Positive</h5>' +
+        '<h5 style="color: #F57F17 "><img src="https://getlocal1.rapidapi.io/good_reviewpng.png" style="margin-right: 5px">'+curSearchResults[num].numPosReviews+' Positive</h5>' +
     '</div>' +
     '<div class="col-md-4">' +
-        '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/workpng.png" style=" margin-right: 5px; ">'+curSearchResults[num].occupation+'</h5>' +
+        '<h5 style="color: #A6A6A6 "><img src="https://getlocal1.rapidapi.io/workpng.png" style=" margin-right: 5px; ">'+curSearchResults[num].occupation+'</h5>' +
         '</div>' +
         '</div>' +
         '<div class="row">' +
         '<div class="col-md-6">' +
-        '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/languagespng.png" style=" margin-right: 5px">'+curSearchResults[num].languages+'</h5>' +
+        '<h5 style="color: #A6A6A6 "><img src="https://getlocal1.rapidapi.io/languagespng.png" style=" margin-right: 5px">'+curSearchResults[num].languages+'</h5>' +
     '</div>' +
     '<div class="col-md-5">' +
-        '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/locationpng.png" style="  margin-right: 5px"> '+curSearchResults[num].city+', ' +curSearchResults[num].country +'</h5>' +
+        '<h5 style="color: #A6A6A6 "><img src="https://getlocal1.rapidapi.io/locationpng.png" style="  margin-right: 5px"> '+curSearchResults[num].city+', ' +curSearchResults[num].country +'</h5>' +
     '</div>' +
     '</div>' +
     '<div class="row">' +
         '<div class="col-md-4">' +
-        '<h5 style="color: #A6A6A6 "><img src="http://getlocal1.rapidapi.io/genderpng.png" style="  margin-right: 10px">'+curSearchResults[num].age+', '+curSearchResults[num].gender+'</h5>'
+        '<h5 style="color: #A6A6A6 "><img src="https://getlocal1.rapidapi.io/genderpng.png" style="  margin-right: 10px">'+curSearchResults[num].age+', '+curSearchResults[num].gender+'</h5>'
 
     ));
 
@@ -268,13 +260,13 @@ $(document).ready( function() {
 
         console.log(data);
         jQuery.ajax({
-                url: "http://getlocal1.rapidapi.io/db",
+                url: "https://getlocal1.rapidapi.io/db",
                 type: "POST",
                 contentType: "application/x-www-form-urlencoded",
                 data: data
             })
             .done(function(data, textStatus, jqXHR) {
-                console.log("HTTP Request Succeeded: " + jqXHR.status);
+                console.log("https Request Succeeded: " + jqXHR.status);
                 console.log(data);
                 $("#firstPageAbout").hide(); //TODO here we should switch to 2nd page
                 $(".jumbotron").hide();
@@ -285,7 +277,7 @@ $(document).ready( function() {
             })
             .fail(function(jqXHR, textStatus, errorThrown) {
                 console
-                    .log("HTTP Request Failed");
+                    .log("https Request Failed");
                 $("#firstPageAbout").hide(); //TODO here we should switch to 2nd page
                 //data = [{'mainImg':'11','price':'', 'rating':'', 'numReviws':''}, {'mainImg':'11','price':'', 'rating':'', 'numReviws':''}, {'mainImg':'11','price':'', 'rating':'', 'numReviws':''}];
                 insertResults(data);
